@@ -1,4 +1,4 @@
-# Predicting the Future of AI via AI
+# Predicting the Future of AI with AI
 
 ## Files
 
