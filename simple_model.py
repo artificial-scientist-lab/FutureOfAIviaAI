@@ -160,7 +160,7 @@ def compute_all_properties_of_list(all_sparse,vlist,data_source):
     AA12=all_sparse[1]**2
     AA12=AA12/AA12.max()
     AA22=all_sparse[2]**2
-    AA22=AA02/AA22.max()
+    AA22=AA22/AA22.max()
     
     all_degs0=np.array(all_sparse[0].sum(0))[0]
     if np.max(all_degs0)>0:
@@ -175,7 +175,7 @@ def compute_all_properties_of_list(all_sparse,vlist,data_source):
         all_degs2=all_degs2/np.max(all_degs2)
 
     all_degs02=np.array(AA02[0].sum(0))[0]
-    if np.max(all_degs2)>0:
+    if np.max(all_degs02)>0:
         all_degs02=all_degs02/np.max(all_degs02)
         
     all_degs12=np.array(AA12[1].sum(0))[0]
