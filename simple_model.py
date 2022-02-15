@@ -308,7 +308,7 @@ def link_prediction_semnet(full_dynamic_graph_sparse,unconnected_vertex_pairs,ye
     train_dynamic_graph_sparse,train_edges_for_checking,train_edges_solution = create_training_data_biased(full_dynamic_graph_sparse, year_start-years_delta, years_delta, min_edges=min_edges, edges_used=edges_used, vertex_degree_cutoff=vertex_degree_cutoff, data_source=data_source)
 
     day_origin = date(1990,1,1)
-    years=[year_start-3,year_start-4,year_start-5]
+    years=[year_start-years_delta,year_start-years_delta-1,year_start-years_delta-2]
 
     train_sparse=[]
     for yy in years:
