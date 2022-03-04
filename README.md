@@ -35,3 +35,23 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=1* | 0.9473      | 0.9317     | 0.9490      |
 | *delta=3* | 0.9408      | 0.9465     | 0.9296      |
 | *delta=5* | 0.9055      | 0.9160     | 0.9030      |
+
+
+## Result of Yichao's Model
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9330      | 0.9252     | 0.9248      |
+| *delta=3* | 0.9172      | 0.9191     | 0.9096      |
+| *delta=5* | 0.8960      | 0.8987     | 0.8935      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9926      | 0.9945     | 0.9982      |
+| *delta=3* | 0.9853      | 0.9965     | 0.9949      |
+| *delta=5* | 0.9793      | 0.9893     | 0.9990      |
