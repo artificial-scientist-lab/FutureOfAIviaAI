@@ -35,3 +35,23 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=1* | 0.9473      | 0.9317     | 0.9490      |
 | *delta=3* | 0.9408      | 0.9465     | 0.9296      |
 | *delta=5* | 0.9055      | 0.9160     | 0.9030      |
+
+
+Transformer Method
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.8232      | 0.8253     | 0.8321      |
+| *delta=3* | -           | -          | -           |
+| *delta=5* | -           | -          | -           |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9407      | 0.9373     | 0.9636      |
+| *delta=3* | -           | -          | -           |
+| *delta=5* | -           | -          | -           |
