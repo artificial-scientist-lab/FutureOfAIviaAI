@@ -37,7 +37,10 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=5* | 0.9055      | 0.9160     | 0.9030      |
 
 
+
 ## Result of Yichao's Model
+=======
+Transformer Method
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
 
@@ -46,6 +49,10 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=1* | 0.9330      | 0.9252     | 0.9248      |
 | *delta=3* | 0.9172      | 0.9191     | 0.9096      |
 | *delta=5* | 0.8960      | 0.8987     | 0.8935      |
+=======
+| *delta=1* | 0.8232      | 0.8253     | 0.8321      |
+| *delta=3* | 0.7418      | 0.7659     | 0.7435      |
+| *delta=5* | 0.6980      | 0.7023     | 0.6743      |
 
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 3*
@@ -55,3 +62,27 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=1* | 0.9926      | 0.9945     | 0.9982      |
 | *delta=3* | 0.9853      | 0.9965     | 0.9949      |
 | *delta=5* | 0.9793      | 0.9893     | 0.9990      |
+=======
+| *delta=1* | 0.9407      | 0.9373     | 0.9636      |
+| *delta=3* | 0.8518      | 0.8804     | 0.8754      |
+| *delta=5* | 0.7365      | 0.7977     | 0.7467      |
+
+
+Transformer Method
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.8232      | 0.8253     | 0.8321      |
+| *delta=3* | 0.7418      | 0.7659     | 0.7435      |
+| *delta=5* | 0.6980      | 0.7023     | 0.6743      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9407      | 0.9373     | 0.9636      |
+| *delta=3* | 0.8518      | 0.8804     | 0.8754      |
+| *delta=5* | 0.7365      | 0.7977     | 0.7467      |
