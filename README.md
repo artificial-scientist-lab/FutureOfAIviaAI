@@ -58,6 +58,7 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=3* | 0.9853      | 0.9965     | 0.9949      |
 | *delta=5* | 0.9793      | 0.9893     | 0.9990      |
 
+
 ## Transformer Method
 
 
@@ -77,3 +78,24 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=1* | 0.9407      | 0.9373     | 0.9636      |
 | *delta=3* | 0.8518      | 0.8804     | 0.8754      |
 | *delta=5* | 0.7365      | 0.7977     | 0.7467      |
+
+
+## Result of Nima Sanjabi's Model
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.8979      | 0.8980     | 0.9010      |
+| *delta=3* | 0.8830      | 0.8823     | 0.8823      |
+| *delta=5* | 0.8489      | 0.8433     | 0.8409      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9496      | 0.9687     | 0.9481      |
+| *delta=3* | 0.9652      | 0.9765     | 0.9788      |
+| *delta=5* | 0.9480      | 0.9538     | 0.9488      |
