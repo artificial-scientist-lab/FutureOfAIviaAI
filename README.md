@@ -99,3 +99,30 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=1* | 0.9496      | 0.9687     | 0.9481      |
 | *delta=3* | 0.9652      | 0.9765     | 0.9788      |
 | *delta=5* | 0.9480      | 0.9538     | 0.9488      |
+
+
+
+## Result of SanatisFinests2's Team ([Report](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9671530))
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.90484      | 0.9099     | 0.9068      |
+| *delta=3* | 0.8660      | 0.8659     | 0.8020      |
+| *delta=5* | 0.6733      | 0.7308     | 0.7780      |
+
+
+
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9872     | 0.9852     | 0.9915     |
+| *delta=3* | 0.9469      | 0.9486     | 0.9633     |
+| *delta=5* | 0.7952     | 0.7870     | 0.6731     |
+
+
+
