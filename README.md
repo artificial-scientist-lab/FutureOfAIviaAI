@@ -59,6 +59,27 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=5* | 0.9793      | 0.9893     | 0.9990      |
 
 
+## Result of Team HashBrown's Model
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9147      | 0.9175     | 0.9156      |
+| *delta=3* | 0.8953      | 0.8977     | 0.8949      |
+| *delta=5* | 0.8610      | 0.8645     | 0.8630      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9900      | 0.9876     | 0.9944      |
+| *delta=3* | 0.9786      | 0.9861     | 0.9867      |
+| *delta=5* | 0.9595      | 0.9689     | 0.9692      |
+
+
 ## Result of Nima Sanjabi's Model
 
 
