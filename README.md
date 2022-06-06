@@ -146,3 +146,44 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=1* | 0.9407      | 0.9373     | 0.9636      |
 | *delta=3* | 0.8518      | 0.8804     | 0.8754      |
 | *delta=5* | 0.7365      | 0.7977     | 0.7467      |
+
+
+
+
+## Results of Bacalhink Team
+
+# Preferential Attachment
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.8838      | 0.8862     | 0.8836      |
+| *delta=3* | 0.8695      | 0.8673     | 0.8628      |
+| *delta=5* | 0.8422      | 0.8359     | 0.8300      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9754      | 0.9649     | 0.9789      |
+| *delta=3* | 0.9590      | 0.9620     | 0.9646      |
+| *delta=5* | 0.9380      | 0.9442     | 0.9386      |
+
+# Common Neighbours
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.8942      | 0.9016     | 0.9009      |
+| *delta=3* | 0.8476      | 0.8761     | 0.8783      |
+| *delta=5* | 0.7677      | 0.8266     | 0.8345      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9369      | 0.9771     | 0.9889      |
+| *delta=3* | 0.9247      | 0.9760     | 0.9786      |
+| *delta=5* | 0.8658      | 0.9520     | 0.9526      |
