@@ -152,7 +152,7 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 
 ## Results of Bacalhink Team
 
-# Preferential Attachment
+### Preferential Attachment
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
 
 |           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
@@ -170,7 +170,7 @@ Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiy
 | *delta=3* | 0.9590      | 0.9620     | 0.9646      |
 | *delta=5* | 0.9380      | 0.9442     | 0.9386      |
 
-# Common Neighbours
+### Common Neighbours
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
 
 |           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
