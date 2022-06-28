@@ -10,6 +10,9 @@
 
 Datasets can be downloaded via [dropbox](https://www.dropbox.com/sh/3wlm7njhkxiyw08/AADvetI5VeLfa26c7Wci8kMka?dl=0) (file names: SemanticGraph_delta_N_cutoff_M_minedge_P.pkl).
 
+##
+![alt text](
+miscellaneous/node_degree_loglog.gif)
 
 ## Result of MK's Baseline
 
