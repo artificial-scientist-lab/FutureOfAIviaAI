@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
+
+sns.set()
+colors = sns.color_palette()
 
 allplots=[]
 all_names=[]
@@ -106,15 +110,15 @@ x = np.arange(9)
 for idx,pp in enumerate(allplots):
     for ii,curr_pp in enumerate(pp[0:9]):
         if ii==0:
-            axs[0].hlines(curr_pp, ii, ii+1, color=color_strs[idx], label=all_names[idx])
+            axs[0].hlines(curr_pp, ii, ii+1, color=colors[idx], label=all_names[idx])
         else:
-            axs[0].hlines(curr_pp, ii, ii+1, color=color_strs[idx])
+            axs[0].hlines(curr_pp, ii, ii+1, color=colors[idx])
     
     for ii,curr_pp in enumerate(pp[9:]):
         if ii==0:
-            axs[1].hlines(curr_pp, ii, ii+1, color=color_strs[idx], label=all_names[idx])
+            axs[1].hlines(curr_pp, ii, ii+1, color=colors[idx], label=all_names[idx])
         else:
-            axs[1].hlines(curr_pp, ii, ii+1, color=color_strs[idx])
+            axs[1].hlines(curr_pp, ii, ii+1, color=colors[idx])
 
 
 axs[0].set_title('New single Links')
@@ -128,7 +132,7 @@ axs[1].set_title('New triple Links')
 for ii in range(2):
     axs[ii].axvline(3,color='lightgrey')
     axs[ii].axvline(6,color='lightgrey')
-    axs[ii].set_ylim([0.6, 1.0])
+    axs[ii].set_ylim([0.6, 1.01])
     
     start, end = axs[ii].get_xlim()
     axs[ii].xaxis.set_ticks(np.arange(0,10, 1))
@@ -147,4 +151,6 @@ for ax in axs.flat:
     ax.label_outer()
 
 
-plt.show()
+fig.tight_layout()
+#plt.show()
+fig.savefig('intro_teaser.pdf', bbox_inches='tight', pad_inches=0.0)
