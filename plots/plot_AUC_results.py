@@ -152,5 +152,5 @@ for ax in axs.flat:
 
 
 fig.tight_layout()
-#plt.show()
-fig.savefig('intro_teaser.pdf', bbox_inches='tight', pad_inches=0.0)
+# plt.show()
+fig.savefig('auc_results_plot.pdf', bbox_inches='tight', pad_inches=0.0)
