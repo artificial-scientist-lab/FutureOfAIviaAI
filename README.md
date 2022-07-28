@@ -190,3 +190,24 @@ miscellaneous/node_degree_loglog.gif)
 | *delta=1* | 0.9369      | 0.9771     | 0.9889      |
 | *delta=3* | 0.9247      | 0.9760     | 0.9786      |
 | *delta=5* | 0.8658      | 0.9520     | 0.9526      |
+
+
+## Feature embedding method
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* |             |            |             |
+| *delta=3* |             |            |             |
+| *delta=5* | 0.7151      | 0.7063     | 0.6872      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* |             |            |             |
+| *delta=3* |             |            |             |
+| *delta=5* |             |  0.8609    | 0.8251      |
