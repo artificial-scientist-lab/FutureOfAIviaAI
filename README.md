@@ -211,3 +211,24 @@ miscellaneous/node_degree_loglog.gif)
 | *delta=1* |             |            |             |
 | *delta=3* |             |            |             |
 | *delta=5* |             |  0.8609    | 0.8251      |
+
+
+## Result of Francisco Valente's Model
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* |             |            |             |
+| *delta=3* | 0.8467      | 0.8490     | 0.8335      |
+| *delta=5* | 0.7897      | 0.8023     | 0.8004      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* |             |            | 0.9819      |
+| *delta=3* | 0.9420      | 0.9562     | 0.9461      |
+| *delta=5* | 0.8914      | 0.9262     | 0.9150      |
