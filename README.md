@@ -200,7 +200,7 @@ miscellaneous/node_degree_loglog.gif)
 |           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
 |-----------|-------------|------------|-------------|
 | *delta=1* |             |            |             |
-| *delta=3* |             |            |             |
+| *delta=3* |             |            | 0.7763      |
 | *delta=5* | 0.7151      | 0.7063     | 0.6872      |
 
 
