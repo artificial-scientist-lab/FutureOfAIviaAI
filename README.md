@@ -210,7 +210,7 @@ miscellaneous/node_degree_loglog.gif)
 |-----------|-------------|------------|-------------|
 | *delta=1* |             |            |             |
 | *delta=3* |             |            |             |
-| *delta=5* |             |  0.8609    | 0.8251      |
+| *delta=5* | 0.7111      |  0.8609    | 0.8251      |
 
 
 ## Result of Francisco Valente's Model
