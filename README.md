@@ -221,7 +221,7 @@ miscellaneous/node_degree_loglog.gif)
 |-----------|-------------|------------|-------------|
 | *delta=1* | 0.8768      | 0.8558     | 0.8467      |
 | *delta=3* | 0.8361      | 0.5039     | 0.5127      |
-| *delta=5* |             | 0.6106     | 0.6026      |
+| *delta=5* | 0.8755      | 0.6106     | 0.6026      |
 
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 3*
