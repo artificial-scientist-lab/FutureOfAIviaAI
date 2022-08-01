@@ -194,6 +194,7 @@ miscellaneous/node_degree_loglog.gif)
 
 ## Feature embedding method
 
+### ProNE
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
 
@@ -211,6 +212,25 @@ miscellaneous/node_degree_loglog.gif)
 | *delta=1* | 0.9952      |  0.9898    | 0.9989      |
 | *delta=3* | 0.8844      |  0.9817    | 0.9862      |
 | *delta=5* | 0.8586      |  0.8609    | 0.8251      |
+
+### Node2Vec
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.8768      | 0.8536     | 0.8467      |
+| *delta=3* | 0.8361      | 0.4961     | 0.5127      |
+| *delta=5* |             | 0.6106     | 0.6026      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9258      |  0.9624    |             |
+| *delta=3* | 0.8647      |            |             |
+| *delta=5* | 0.8573      |  0.6133    | 0.6304      |
 
 
 ## Result of Francisco Valente's Model
