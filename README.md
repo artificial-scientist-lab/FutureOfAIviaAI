@@ -1,5 +1,7 @@
 # Predicting the Future of AI with AI
 
+This page collects results for an AI benchmark for link prediction in exponentially growing knowledge networks. It is a follow-up of the [IEEE BigData Science4Cast competition 2021](https://github.com/iarai/science4cast).
+
 ## Files
 
 - **create_data.py**: A simple python file for creating the datasets SemanticGraph_delta_N_cutoff_M_minedge_P.pkl from the full semantic network all_edges.pkl.
