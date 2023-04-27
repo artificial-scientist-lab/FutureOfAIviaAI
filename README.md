@@ -173,26 +173,7 @@ miscellaneous/node_degree_loglog.gif)
 
 ## Resuts of Andrew Gritsevskiy -- Feature embedding method (M7)
 
-### ProNE
-
-*Area under the Curve (AUC) for prediction of new edge_weights of 1*
-
-|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
-|-----------|-------------|------------|-------------|
-| *delta=1* | 0.8354      | 0.8538     | 0.7375      |
-| *delta=3* | 0.8210      | 0.7043     | 0.7763      |
-| *delta=5* | 0.7383      | 0.7063     | 0.6872      |
-
-
-*Area under the Curve (AUC) for prediction of new edge_weights of 3*
-
-|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
-|-----------|-------------|------------|-------------|
-| *delta=1* | 0.9952      |  0.9898    | 0.9989      |
-| *delta=3* | 0.8844      |  0.9817    | 0.9862      |
-| *delta=5* | 0.8586      |  0.8609    | 0.8251      |
-
-### Node2Vec
+### Node2Vec (M7A)
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
 
@@ -211,7 +192,24 @@ miscellaneous/node_degree_loglog.gif)
 | *delta=3* | 0.8648      |  0.5025    | 0.5402      |
 | *delta=5* | 0.8573      |  0.6133    | 0.6423      |
 
+### ProNE (M7B)
 
+*Area under the Curve (AUC) for prediction of new edge_weights of 1*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.8354      | 0.8538     | 0.7375      |
+| *delta=3* | 0.8210      | 0.7043     | 0.7763      |
+| *delta=5* | 0.7383      | 0.7063     | 0.6872      |
+
+
+*Area under the Curve (AUC) for prediction of new edge_weights of 3*
+
+|           | *cutoff=0*  | *cutoff=5* | *cutoff=25* |
+|-----------|-------------|------------|-------------|
+| *delta=1* | 0.9952      |  0.9898    | 0.9989      |
+| *delta=3* | 0.8844      |  0.9817    | 0.9862      |
+| *delta=5* | 0.8586      |  0.8609    | 0.8251      |
 
 ## Result of Team Harlin -- Transformer Method (M8)
 
