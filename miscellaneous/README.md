@@ -1,3 +1,1 @@
-## Collection of useful files
-
-- **full_concepts_new.txt**: Concepts which build the nodes of the semantic network.
+network_analysis.ipynb is used to analyse some properties (such as the growth rate and connected components).
