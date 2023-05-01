@@ -21,7 +21,7 @@ Datasets can be downloaded via [zenodo.org](https://zenodo.org/record/7882892#.Z
 miscellaneous/node_degree_loglog.gif)
 
 
-## Result of Yichao's Model (M1)
+## Result of [Yichao's Model (M1)](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/tree/main/all_models/M1)
 
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
@@ -42,7 +42,7 @@ miscellaneous/node_degree_loglog.gif)
 | *delta=5* | 0.9793      | 0.9893     | 0.9990      |
 
 
-## Result of Team HashBrown's Model (M2)
+## Result of [Team HashBrown's Model (M2)](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/tree/main/all_models/M2)
 
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
@@ -63,7 +63,7 @@ miscellaneous/node_degree_loglog.gif)
 | *delta=5* | 0.9595      | 0.9689     | 0.9692      |
 
 
-## Result of Nima Sanjabi's Model (M3)
+## Result of [Nima Sanjabi's Model (M3)](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/tree/main/all_models/M3)
 
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
@@ -85,7 +85,7 @@ miscellaneous/node_degree_loglog.gif)
 
 
 
-## Results of Bacalhink Team (M4)
+## Results of [Bacalhink Team (M4)](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/tree/main/all_models/M4)
 
 ### Preferential Attachment (M4A)
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
@@ -125,7 +125,7 @@ miscellaneous/node_degree_loglog.gif)
 
 
 
-## Result of Francisco Valente's Model (M5)
+## Result of [Francisco Valente's Model (M5)](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/tree/main/all_models/M5)
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
 
@@ -171,7 +171,7 @@ miscellaneous/node_degree_loglog.gif)
 
 
 
-## Resuts of Andrew Gritsevskiy -- Feature embedding method (M7)
+## Resuts of [Andrew Gritsevskiy -- Feature embedding method (M7)](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/tree/main/all_models/M7)
 
 ### Node2Vec (M7A)
 
@@ -211,7 +211,7 @@ miscellaneous/node_degree_loglog.gif)
 | *delta=3* | 0.8844      |  0.9817    | 0.9862      |
 | *delta=5* | 0.8586      |  0.8609    | 0.8251      |
 
-## Result of Team Harlin -- Transformer Method (M8)
+## Result of [Team Harlin -- Transformer Method (M8)](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/tree/main/all_models/M8)
 
 
 *Area under the Curve (AUC) for prediction of new edge_weights of 1*
