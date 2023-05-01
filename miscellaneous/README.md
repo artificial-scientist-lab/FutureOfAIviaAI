@@ -1,1 +1,2 @@
-network_analysis.ipynb is used to analyse some properties (such as the growth rate and connected components).
+- network_analysis.ipynb is used to analyse some properties (such as the growth rate and connected components).
+- plot_AUC_results.py creates the figure of AUCs
