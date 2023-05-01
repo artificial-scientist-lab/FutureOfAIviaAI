@@ -22,7 +22,7 @@ Datasets can be downloaded via [zenodo.org](https://zenodo.org/record/7882892#.Z
 3) Run `python evaluate_model.py`. This runs the baseline model M6 on all 18 datasets. Each dataset takes roughly 2h on a standard notebook (i.e. a total of 36 hours).
 4) The python code generates a log file called `logs_SemanticGraph_delta_M_cutoff_N_minedge_K.pkl.txt` (M,N,K are numbers). One example (for M=1, N=25, K=1) of such an expected output file is stored [here](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/blob/main/expected_output/logs_SemanticGraph_delta_1_cutoff_25_minedge_1.pkl.txt). Similar files will be generated for all other 17 datasets.
 
-##
+## Degree Evolution
 ![alt text](
 miscellaneous/node_degree_loglog.gif)
 
