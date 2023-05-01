@@ -78,7 +78,7 @@ if __name__ == '__main__':
                         AUC=calculate_ROC(all_idx, np.array(unconnected_vertex_pairs_solution))
                         print('Area Under Curve for Evaluation: ', AUC,'\n\n\n')
         
-                        with open("logs"+data_source[0:-4]+".txt", "a") as log_file:
+                        with open("logs"+data_source+".txt", "a") as log_file:
                             log_file.write("---\n")  
                             log_file.write("edges_used="+str(edges_used)+"\n") 
                             log_file.write("percent_positive_examples="+str(percent_positive_examples)+"\n") 
