@@ -16,6 +16,12 @@ This page collects results for an AI benchmark for link prediction in exponentia
 
 Datasets can be downloaded via [zenodo.org](https://zenodo.org/record/7882892#.ZE-Egx9BwuU) (file names: SemanticGraph_delta_N_cutoff_M_minedge_P.pkl).
 
+## Running the code
+1) Create the required environment (see `environmen.yaml` and `pyproject.toml`). Requirements: pytorch, numpy, networkx, scipy, matplotlib.
+2) Download the dataset files from [zenodo.org](https://zenodo.org/record/7882892#.ZE-Egx9BwuU) and store them in the same directory as the python files.
+3) Run `python evaluate_model.py`. This runs the baseline model M6 on all 18 datasets. Each dataset takes roughly 2h on a standard notebook.
+4) The python code generates a log file called 'logs_SemanticGraph_delta_M_cutoff_N_minedge_K.pkl.txt' (M,N,K are numbers). One example (for M=1, N=25, K=1) of such an expected output file is stored [here](https://github.com/artificial-scientist-lab/FutureOfAIviaAI/blob/main/expected_output/logs_SemanticGraph_delta_1_cutoff_25_minedge_1.pkl.txt). Similar files will be generated for all other 17 datasets.
+
 ##
 ![alt text](
 miscellaneous/node_degree_loglog.gif)
