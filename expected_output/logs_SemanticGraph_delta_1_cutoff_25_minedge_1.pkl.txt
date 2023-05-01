@@ -1345,3 +1345,11 @@ Computing properties for Test data
     compute_all_properties_of_list progress: (1.9977314472198486sec) 9.99M/10.0M
 2.2) Uses the trained network to predict whether edges are created by 2022.
 3) Creates a sorted index list, from highest predicted vertex pair to least predicted one (sorted_predictions)
+---
+edges_used=1000000
+percent_positive_examples=1
+batch_size=400
+lr_enc=3.0000000000000004e-05
+rnd_seed=42
+AUC=0.8512233691649538
+
