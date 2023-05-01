@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "futureofaiviaai"
+version = "1.0"
+description = "Predicting the Future of AI with AI: High-quality link prediction in an exponentially growing knowledge network"
+authors = ["Mario Krenn, Lorenzo Buffoni, Bruno Coutinho, Sagi Eppel, Jacob Gates Foster, Andrew Gritsevskiy, Harlin Lee, Yichao Lu, Joao P. Moutinho, Nima Sanjabi, Rishi Sonthalia, Ngoc Mai Tran, Francisco Valente, Yangxinyu Xie, Rose Yu, Michael Kopp"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.8.8"
+numpy = "1.20.1"
+scipy = "1.6.2"
+networkx = "2.5"
+matplotlib = "3.3.4"
+torch = "1.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
