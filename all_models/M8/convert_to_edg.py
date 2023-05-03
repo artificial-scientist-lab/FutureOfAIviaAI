@@ -3,8 +3,7 @@ import os
 import numpy as np
 from datetime import date
 
-#delta_list=[1,3,5]
-delta_list=[3]
+delta_list=[1,3,5]
 cutoff_list=[25,5,0]
 min_edges_list=[1,3]
 
@@ -40,9 +39,4 @@ for fn in fns:
                 
                 graph = filter_by_year(full_dynamic_graph_sparse, yy)
                 np.savetxt(edg_fn, graph[:, :-1], delimiter='\t', fmt='%d')
-
-                #         train_years = range(year_start-years_delta, year_start-years_delta-past, -1)
-#         eval_years = range(year_start, year_start-past, -1)
-        
-#         for yy in sorted(set(list(train_years)+list(eval_years)), reverse=True):
             
