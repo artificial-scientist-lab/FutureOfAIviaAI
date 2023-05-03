@@ -1,21 +1,20 @@
 # Link prediction using simple network metrics
-Working repository for the science4cast competition.
 
-In the notebook full_code.ipynb there is all the code to replicate the results of the submissions of team Bacalhink. The data to run the algorithm can be found in the science4cast website https://www.iarai.ac.at/science4cast/.
+This code stems from the original model developed by the Bacalhink team for the Science4Cast competition (https://www.iarai.ac.at/science4cast/), as described in the `Bacalhink Scientific Report.pdf` file, also available here https://arxiv.org/abs/2201.07978.
 
-These methods have been initially inspired by a relaxation of a quantum walker L3 and L2 methods but then departed in favour of other metrics like PA. More details of the approach used can be found in the scientific report.
+Authors: João P. Moutinho, Bruno Coutinho, Lorenzo Buffoni
 
-# Competition submissions
+In the original competition the full method included a component based on a Preferential Attachment score (PA) and one based on a Common Neighbours score (CN), with a balance free parameter as well as a link-weighting function. 
 
-Here is what we have submitted to the leaderboard:
+For this paper, given that we were working with a much larger dataset, we evaluated only the PA and CN scores separately, corresponding to the models M4A and M4B as described in the Predicting the Future of AI paper.
 
-- Bacalhau à Brás: the PA method - performance: 0.89715
-- Bacalhau à Gomes de Sá: the AA method - performance: 0.87091
-- Bacalhau com Todos: combines AA and PA - performance: 0.91385
-- Bacalhau com Natas: PA with time weights - performacne: 0.90364
-- Bacalhau à Lagareiro: combines AA and PA with time weights - performance: 0.91853
+## Running the models
 
-## Free parameters:
+Besides the main dependencies, our `evaluate_model` script uses also the `multiprocessing` package for parallelization.
 
-- a: defines the balance in the linear combination of AA with PA
-- (θ0, θ1, θ2, θ3): defines the time-weighting function
+The models are defined in `preferential_attachment.py` and `common_neighbours.py`. To run them:
+1. Download the datasets following [FutureOfAIviaAI](https://github.com/MarioKrenn6240/FutureOfAIviaAI)
+2. Add the `SemanticGraph_delta_{N}_cutoff_{M}_minedge_{P}.pkl` files to the same folder
+3. Select one model or the other in `evaluate_model.py`
+4. Run `evaluate_model.py`
+5. AUC results are printed to AUC Summary.txt`
