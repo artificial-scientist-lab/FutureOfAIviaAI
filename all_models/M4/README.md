@@ -17,4 +17,4 @@ The models are defined in `preferential_attachment.py` and `common_neighbours.py
 2. Add the `SemanticGraph_delta_{N}_cutoff_{M}_minedge_{P}.pkl` files to the same folder
 3. Select one model or the other in `evaluate_model.py`
 4. Run `evaluate_model.py`
-5. AUC results are printed to AUC Summary.txt`
+5. AUC results are printed to `AUC Summary.txt`
