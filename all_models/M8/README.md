@@ -23,10 +23,11 @@ This script does the following for every combination of delta, cutoff, and min_e
 
 1. Aligns node2vec embeddings using [procrustes method as implemented in SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.orthogonal_procrustes.html), and saves it to `Transformer-xxx/embeddings` folder.
 
-2. Pre-trains a transformer model to perform "fill in the blank" tasks with sequences of embedding vectors over the years. The Dataset object randomly masks 30% of the embedding vectors for this step.
+2. Pre-trains a transformer model to perform "fill in the blank" tasks with sequences of embedding vectors over the years. The Dataset object randomly masks 30% of the embedding vectors for this step. The model is then saved in `Transformer-xxx/model`.
 
 3. Samples edges in the graph to create training data for the classifier with `create_training_data_biased`. 
 
-4. Trains a small classifier on top of the pre-trained transformer model.
+4. Trains a small classifier on top of the pre-trained transformer model. Final prediction results on the provided test data is saved in `TransformerClassifier-xxx/`, which is used to calculate AUC.
+
 
 
