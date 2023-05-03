@@ -10,5 +10,5 @@ For this paper, given that we were working with a much larger dataset, we evalua
 
 The models are defined in `preferential_attachment.py` and `common_neighbours.py`. To run them:
 - Download the datasets
-- Select on or the other in `evaluate_model.py`
+- Select one model or the other in `evaluate_model.py`
 - Run `evaluate_model.py`
