@@ -15,5 +15,6 @@ Besides the main dependencies, our `evaluate_model` script uses also the `multip
 The models are defined in `preferential_attachment.py` and `common_neighbours.py`. To run them:
 1. Download the datasets following [FutureOfAIviaAI](https://github.com/MarioKrenn6240/FutureOfAIviaAI)
 2. Add the `SemanticGraph_delta_{N}_cutoff_{M}_minedge_{P}.pkl` files to the same folder
-2. Select one model or the other in `evaluate_model.py`
-3. Run `evaluate_model.py`
+3. Select one model or the other in `evaluate_model.py`
+4. Run `evaluate_model.py`
+5. AUC results are printed to `AUC Summary.txt`
