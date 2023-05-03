@@ -228,7 +228,10 @@ def genEdgeFeatures(G,t0,node_features_t0,node_features_1,train_edges,scaler = S
   
   pirate_edges_itt = zip(pirate_unpacked,[n]*len(pirate_unpacked))
   pirate_edges = [e for e in pirate_edges_itt]
-  edge_feats['pirate'] = compute_edge_features(pirate_edges,node_features_1)
+  try:
+    edge_feats['pirate'] = compute_edge_features(pirate_edges,node_features_1)
+  except:
+    edge_feats['pirate'] = None
 
   #deal with blinds
   obj = pickle.load(open(blind_file,'rb'))
@@ -238,8 +241,11 @@ def genEdgeFeatures(G,t0,node_features_t0,node_features_1,train_edges,scaler = S
     blind_count = obj
   
   blind_edges = [(n,n)]
-  one_blind_feats = compute_edge_features(blind_edges,node_features_1)   
-  edge_feats['blind']= np.vstack([one_blind_feats]*blind_count)
+  one_blind_feats = compute_edge_features(blind_edges,node_features_1)
+  try:
+    edge_feats['blind']= np.vstack([one_blind_feats]*blind_count)
+  except:
+    edge_feats['blind'] = None
   
   #add in DICE for all features computed so far.
   dice = {}  
@@ -248,30 +254,32 @@ def genEdgeFeatures(G,t0,node_features_t0,node_features_1,train_edges,scaler = S
   dice['good'] = dice_seen_edges.reshape((len(dice_seen_edges),1))
   
   #for pirates: compute dice via its interpretation. See written pdf. 
-  print('computing dice pirates')
-  adj_csr = G.get_adjacency_sparse()
-  #get: \sum_w |N_w \cap V|
-  sumw_cap_V = adj_csr[V_newborn,:].sum()
-  pirate_ctr = Counter(pirate_unpacked)
-  pirate_idx = list(pirate_ctr.keys())
-  pirate_neighbor_size = np.array(G.neighborhood_size(pirate_idx))
-  #np.array of bottoms for each pirate_idx
-  bottom = len(V_newborn)*pirate_neighbor_size + sumw_cap_V
-  #np.array of tops
-  adj_csr_sums = adj_csr[V_newborn,:].sum(axis=0)
-  top = np.array([2*adj_csr_sums[0,G.neighbors(u)].sum() for u in pirate_idx])
-  dice_pirate_idx = dict(zip(pirate_idx,top/bottom))
-  dice_pirates = np.array([dice_pirate_idx[u] for u in pirate_unpacked])
-  dice['pirate'] = dice_pirates.reshape((len(dice_pirates),1))
+  if edge_feats['pirate'] is not None:
+    print('computing dice pirates')
+    adj_csr = G.get_adjacency_sparse()
+    #get: \sum_w |N_w \cap V|
+    sumw_cap_V = adj_csr[V_newborn,:].sum()
+    pirate_ctr = Counter(pirate_unpacked)
+    pirate_idx = list(pirate_ctr.keys())
+    pirate_neighbor_size = np.array(G.neighborhood_size(pirate_idx))
+    #np.array of bottoms for each pirate_idx
+    bottom = len(V_newborn)*pirate_neighbor_size + sumw_cap_V
+    #np.array of tops
+    adj_csr_sums = adj_csr[V_newborn,:].sum(axis=0)
+    top = np.array([2*adj_csr_sums[0,G.neighbors(u)].sum() for u in pirate_idx])
+    dice_pirate_idx = dict(zip(pirate_idx,top/bottom))
+    dice_pirates = np.array([dice_pirate_idx[u] for u in pirate_unpacked])
+    dice['pirate'] = dice_pirates.reshape((len(dice_pirates),1))
   
-  #compute: dice_newborn. See written pdf. 
-  print('computing dice newborn')
-  select = adj_csr_sums >= 2
-  top = np.sum(np.multiply(adj_csr_sums[select],adj_csr_sums[select]-1)*2)
-  bottom = adj_csr_sums.sum()*2*(len(V_newborn)-1)
-  dice_newborn_average = top/bottom
-  dice_blind = np.array([dice_newborn_average]*blind_count)
-  dice['blind'] = dice_blind.reshape((len(dice_blind),1))
+  if edge_feats['blind'] is not None:
+    #compute: dice_newborn. See written pdf. 
+    print('computing dice newborn')
+    select = adj_csr_sums >= 2
+    top = np.sum(np.multiply(adj_csr_sums[select],adj_csr_sums[select]-1)*2)
+    bottom = adj_csr_sums.sum()*2*(len(V_newborn)-1)
+    dice_newborn_average = top/bottom
+    dice_blind = np.array([dice_newborn_average]*blind_count)
+    dice['blind'] = dice_blind.reshape((len(dice_blind),1))
   
   #tack on cosine at time t = 1
   hoprec_arr = get_hoprec_array(t0=1,yr=yr,tmin=hoprec_tmin,weight=hoprec_weight)
@@ -283,23 +291,27 @@ def genEdgeFeatures(G,t0,node_features_t0,node_features_1,train_edges,scaler = S
     edge_features_cosine = cosine_of_edges(hoprec_arr,unseen_edges_valid,impute_idx=V_newborn)
  
   cosine_good = np.reshape(edge_features_cosine,(len(edge_features_cosine),1))
-  #cosine of blind: average over all nodes in V_newborn
-  cosine_blind = cosine_of_blind(hoprec_arr[V_newborn,:])
-  print('cosine_blind over newborn =' + str(cosine_blind))
-  print('cosine_blind over all = ' + str(cosine_of_blind(hoprec_arr)))
-  #for pirates: average cosine over all nodes in V_newborn. 
-  cosine_pirate = cosine_of_pirate(hoprec_arr,pirate_idx,V_newborn)
-  cosine_pirate_idx = dict(zip(pirate_idx,cosine_pirate))
-  cosine_pirates = np.array([cosine_pirate_idx[u] for u in pirate_unpacked])
+  if edge_feats['blind'] is not None:
+    #cosine of blind: average over all nodes in V_newborn
+    cosine_blind = cosine_of_blind(hoprec_arr[V_newborn,:])
+    print('cosine_blind over newborn =' + str(cosine_blind))
+    print('cosine_blind over all = ' + str(cosine_of_blind(hoprec_arr)))
+  if edge_feats['pirate'] is not None:
+    #for pirates: average cosine over all nodes in V_newborn. 
+    cosine_pirate = cosine_of_pirate(hoprec_arr,pirate_idx,V_newborn)
+    cosine_pirate_idx = dict(zip(pirate_idx,cosine_pirate))
+    cosine_pirates = np.array([cosine_pirate_idx[u] for u in pirate_unpacked])
   #reassemble
   cosine = {}
   cosine['good'] = cosine_good
-  cosine['pirate'] = cosine_pirates.reshape((len(cosine_pirates),1))
-  cosine['blind'] = np.reshape(np.array([cosine_blind]*blind_count),(blind_count,1))
+  if edge_feats['pirate'] is not None:
+    cosine['pirate'] = cosine_pirates.reshape((len(cosine_pirates),1))
+  if edge_feats['blind'] is not None:
+    cosine['blind'] = np.reshape(np.array([cosine_blind]*blind_count),(blind_count,1))
 
   #append what we have so far
   scaler = out['scaler_for_X']
-  for key in ['good','pirate','blind']:
+  for key in cosine.keys():
     edge_feats[key] = np.hstack((edge_feats[key], dice[key],cosine[key]))
     if scaler is not None:
         d = edge_feats[key].shape[1]
@@ -312,8 +324,11 @@ def genEdgeFeatures(G,t0,node_features_t0,node_features_1,train_edges,scaler = S
   d = edge_feats['good'].shape[1]
   X_test = np.empty((total_unseen,d))
   X_test[good_idx,] = edge_feats['good']
-  X_test[pirate_unpacked_idx,] = edge_feats['pirate']
-  X_test[blind_idx,] = edge_feats['blind']
+
+  if edge_feats['pirate'] is not None:
+    X_test[pirate_unpacked_idx,] = edge_feats['pirate']
+  if edge_feats['blind'] is not None:
+    X_test[blind_idx,] = edge_feats['blind']
   print('cosine range : ' + str(min(X_test[:,-1])) + ',' + str(max(X_test[:,-1])))
   
   out['X_test_std'] = X_test

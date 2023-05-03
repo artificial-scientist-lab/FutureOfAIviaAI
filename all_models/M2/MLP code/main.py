@@ -82,10 +82,7 @@ def get_train_val_test_data(args):
   return (X_dict,y_dict,(train_index,test_index))
 
 
-
-
-
-if __name__ == '__main__':
+def main():
   #make sure that datafiles and folder names are as expected
   for folder in ['../data/processed','../model_outputs']:
     p = Path(folder)
@@ -102,5 +99,9 @@ if __name__ == '__main__':
   MLP_options = {'hidden_layer_sizes': (13,13,13,13,13), 'activation': 'relu', 'max_iter': 100, 'random_state': 42, 'early_stopping': True, 'verbose': False}
   X_dict,y_dict,sss = get_train_val_test_data(args)  
   y_test_hat = fitSK_MLP(X_dict,y_dict,MLP_options,args,get_predictions=True)
-  convert_to_submission(y_test_hat)
+  return return_prediction(y_test_hat)
+
+
+if __name__ == '__main__':
+  main()
   

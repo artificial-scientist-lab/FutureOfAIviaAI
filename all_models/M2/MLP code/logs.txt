@@ -1,0 +1,72 @@
+Read ../data/SemanticGraph_delta_1_cutoff_25_minedge_1.pkl
+Area Under Curve for Evaluation: 0.9156292060971978 
+
+
+Read ../data/SemanticGraph_delta_1_cutoff_25_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9944226534278622 
+
+
+Read ../data/SemanticGraph_delta_1_cutoff_5_minedge_1.pkl
+Area Under Curve for Evaluation: 0.9174802979212996 
+
+
+Read ../data/SemanticGraph_delta_1_cutoff_5_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9875754312866829 
+
+
+Read ../data/SemanticGraph_delta_1_cutoff_0_minedge_1.pkl
+Area Under Curve for Evaluation: 0.9147292312847087 
+
+
+Read ../data/SemanticGraph_delta_1_cutoff_0_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9900493800328357 
+
+
+Read ../data/SemanticGraph_delta_3_cutoff_25_minedge_1.pkl
+Area Under Curve for Evaluation: 0.8949061588269804 
+
+
+Read ../data/SemanticGraph_delta_3_cutoff_25_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9867065048666007 
+
+
+Read ../data/SemanticGraph_delta_3_cutoff_5_minedge_1.pkl
+Area Under Curve for Evaluation: 0.8976808242377602 
+
+
+Read ../data/SemanticGraph_delta_3_cutoff_5_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9860601188029774 
+
+
+Read ../data/SemanticGraph_delta_3_cutoff_0_minedge_1.pkl
+Area Under Curve for Evaluation: 0.8953183341545361 
+
+
+Read ../data/SemanticGraph_delta_3_cutoff_0_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9785720766136785 
+
+
+Read ../data/SemanticGraph_delta_5_cutoff_25_minedge_1.pkl
+Area Under Curve for Evaluation: 0.8630221928614636 
+
+
+Read ../data/SemanticGraph_delta_5_cutoff_25_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9692592821626159 
+
+
+Read ../data/SemanticGraph_delta_5_cutoff_5_minedge_1.pkl
+Area Under Curve for Evaluation: 0.8645260001508679 
+
+
+Read ../data/SemanticGraph_delta_5_cutoff_5_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9689330331111042 
+
+
+Read ../data/SemanticGraph_delta_5_cutoff_0_minedge_1.pkl
+Area Under Curve for Evaluation: 0.8609756323034725 
+
+
+Read ../data/SemanticGraph_delta_5_cutoff_0_minedge_3.pkl
+Area Under Curve for Evaluation: 0.9594851856810804 
+
+

@@ -3,7 +3,7 @@ from collections import Counter
 import numpy as np
 import argparse
 import os
-from utils import get_field_file, get_embed_dict
+from utils_HOPREC import get_field_file, get_embed_dict
 
 parser = argparse.ArgumentParser(description='Get HOPREC Embedding')
 parser.add_argument('--year', help='year of data')
@@ -12,14 +12,11 @@ parser.add_argument('--t_max',type=float, help='Using all edges before t_max')
 
 args = parser.parse_args()
 
-if __name__ == '__main__':
-    yr = args.year
-    t_min = args.t_min
-    t_max = args.t_max
+def generate_hoprec_embedding(yr, t_min, t_max):
     if t_max == 1:
         t_max = int(t_max)
 
-    data_source = '../data/raw/TrainSet' + yr + '_3_fractional_time.pkl'
+    data_source = '../data/raw/CompetitionSet' + yr + '_3_fractional_time.pkl'
     full_graph,unseen_pairs = pickle.load(open(data_source,'rb'))
 
     full_graph = np.array(full_graph)
@@ -44,10 +41,16 @@ if __name__ == '__main__':
 
     embed_file = 'embed'
     dim = 128
-    embed_out_file = f'embedding_{yr}_{t_min}_{t_max}_raw_count_dim_{dim}'
+    embed_out_file = f'../data/HOPREC/2017_raw_count/embedding_{yr}_{t_min}_{t_max}_raw_count_dim_{dim}'
 
     print('Running HOPREC...')
     os.system(f'./smore/cli/hoprec -train {train_file} -save {embed_file} -field {field_file} -dimensions {dim} -sample_times 500 -threads 8')
 
     print('Getting embed_dict...')
     get_embed_dict(embed_file, embed_out_file, dim)
+
+if __name__ == '__main__':
+    yr = args.year
+    t_min = args.t_min
+    t_max = args.t_max
+    generate_hoprec_embedding(yr, t_min, t_max)

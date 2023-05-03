@@ -21,6 +21,7 @@ import json
 import git
 from sklearn.preprocessing import normalize
 from tqdm import tqdm
+from get_HOPREC_embedding import generate_hoprec_embedding
 
 def get_hoprec_array(t0, yr:str, weight='raw',tmin=0,hoprec_folder = '../data/HOPREC'):
   """ Load the hoprec array from raw, and rename. 
@@ -244,7 +245,9 @@ def getData(data_source = '../data/raw/',yr='2014',suffix='_3_fractional_time.pk
     original_file = data_source+yr+'_3'  
     #try to generate the time fraction file
     print('converting time to fraction for' + original_file)
-    convert_time_to_fraction(original_file)    
+    convert_time_to_fraction(original_file)
+    generate_hoprec_embedding(yr, 0.5, 0.9)
+    generate_hoprec_embedding(yr, 0.5, 1)
   return pickle.load(open(full_path, 'rb'))
   
 def getAnswer(yr = '2014'):  
@@ -478,3 +481,8 @@ def reproducibility_check(f_new = '../425370062f34665ae86215aa9b3cdb156ba573f3.j
   #location of unmatched
   unmatched = np.where(np.array(pred1) != np.array(pred2))
   print('rankings of the unmatched' + str(unmatched))  
+
+
+def return_prediction(y_hat):
+  sorted_predictions_eval=np.flip(np.argsort(y_hat,axis=0))
+  return sorted_predictions_eval
