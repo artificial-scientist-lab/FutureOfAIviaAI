@@ -1,6 +1,7 @@
 # Hand-crafted features + PCA + random forest prediction
 
 Author: Francisco Valente
+
 This is a modified version of the method described [in this report](https://arxiv.org/pdf/2202.03393.pdf) and of its [repository](https://github.com/PFranciscoValente/science4cast_topological) .
 
 Requirements: numpy, scipy, networkx, sklearn
@@ -21,4 +22,5 @@ Download and unzip the [data files](https://zenodo.org/record/7882892#.ZE-Egx9Bw
 ### Run model
 
 Run `evaluate_model.py` to evaluate the developed model on the datasets
+
 The AUC results for all models will be stored in models_performance.txt
