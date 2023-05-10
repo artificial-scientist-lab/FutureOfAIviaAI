@@ -24,7 +24,7 @@ def perform_pca(set_feat, data_training, data_evaluation):
 def pca_data(data_source):
 
     # load data
-    folder_to_load = os.path.join(os.getcwd(),'data_extracted')
+    folder_to_load = os.path.join(os.getcwd(),'extracted_data')
     training_features_file_name = "TrainingFeatures_" + data_source + ".npy"
     training_label_file_name = "TrainingLabel_" + data_source + ".npy"
     evaluation_features_file_name = "EvaluationFeatures_" + data_source + ".npy"
