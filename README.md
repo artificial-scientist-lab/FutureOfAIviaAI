@@ -1,4 +1,4 @@
-# Forecasting the future of artificial intelligence with machine learning-based link prediction in an exponentially growing knowledge network
+# Forecasting the future of artificial intelligence
 
 
 **[Forecasting the future of artificial intelligence with machine learning-based link prediction in an exponentially growing knowledge network]([https://arxiv.org/abs/2210.00881](https://www.nature.com/articles/s42256-023-00735-0))**\
