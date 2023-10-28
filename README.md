@@ -1,10 +1,10 @@
-# Predicting the Future of AI with AI
+# Forecasting the future of artificial intelligence with machine learning-based link prediction in an exponentially growing knowledge network
 
 
-**[Predicting the Future of AI with AI: High-quality link prediction in an exponentially growing knowledge network](https://arxiv.org/abs/2210.00881)**\
+**[Forecasting the future of artificial intelligence with machine learning-based link prediction in an exponentially growing knowledge network]([https://arxiv.org/abs/2210.00881](https://www.nature.com/articles/s42256-023-00735-0))**\
 _Mario Krenn, Lorenzo Buffoni, Bruno Coutinho, Sagi Eppel, Jacob Gates Foster, Andrew Gritsevskiy, Harlin Lee, Yichao Lu, Joao P. Moutinho, Nima Sanjabi, Rishi Sonthalia, Ngoc Mai Tran, Francisco Valente, Yangxinyu Xie, Rose Yu, Michael Kopp_
 
-This page collects results for an AI benchmark for link prediction in exponentially growing knowledge networks. It is a follow-up of the [IEEE BigData Science4Cast competition 2021](https://github.com/iarai/science4cast), described in our [paper](https://arxiv.org/abs/2210.00881).
+This page collects results for an AI benchmark for link prediction in exponentially growing knowledge networks. It is a follow-up of the [IEEE BigData Science4Cast competition 2021](https://github.com/iarai/science4cast), described in our [Nature Machine Intelligence paper]([https://arxiv.org/abs/2210.00881](https://www.nature.com/articles/s42256-023-00735-0)).
 
 ## Files
 
